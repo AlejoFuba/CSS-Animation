@@ -54,7 +54,6 @@ transition: property - Duration - Timing-function - delay; */
     animation-play-state: running;
 */
 
-
 /* @keyframes nombredelaanimacion{
     0%{transform:scale(1)} primer estado
     50%{transform:scale(1.2)} segundo estado
