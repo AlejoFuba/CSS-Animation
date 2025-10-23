@@ -1,0 +1,49 @@
+.example {
+    background: #f3f7ff;
+    border: 1px dashed rgba(27, 123, 224, 0.15);
+    padding: 1rem;
+    margin-top: 0.75rem;
+    border-radius: 8px
+}
+
+.box {
+    height: 220px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #fff, #eef6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #1b7be0;
+    position: relative;
+}
+
+.box-sticky {
+    height: 100vh;
+    overflow-y: scroll;
+    border: 1px solid #e6f0ff
+}
+
+.content{
+    height: 100vh;
+}
+
+.relative {
+    /* position: relative */
+    /* agregamos posiciones top right left o bottom */
+}
+
+.absolute {
+    /* position: absolute; */
+    /* agregamos posiciones top right left o bottom */
+}
+
+.fixed {
+    /* position: fixed; */
+    /* agregamos posiciones top right left o bottom */
+}
+
+.sticky {
+    /* position: sticky; */
+    /* agregamos posiciones top right left o bottom */
+}
+

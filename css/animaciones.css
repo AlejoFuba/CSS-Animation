@@ -1,0 +1,83 @@
+.demo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-block: 3rem;
+}
+
+/* PROPIEDAD DE TRANSITION
+Transition-property
+Transition-duration
+Transition-timing-function
+Transition-delay
+transition: property - Duration - Timing-function - delay; */
+
+.box{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #1aa179;
+    border: 1px dashed #1b7be0;
+    border-radius: 8px;
+    /* definimos la transicion de nuestro elemento */
+}
+
+/* Hover es una seudo clase que nos ayuda a indicar estados */
+.box:hover{
+    /* Aplicamos transformaciones al elemento */
+}
+
+.box-animation{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px dashed #1b7be0;
+    border-radius: 8px;
+}
+
+/* Definiendo animacion */
+    /* animation-name: name;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.2,1.29,.77,.22);
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+*/
+
+
+/* @keyframes nombredelaanimacion{
+    0%{transform:scale(1)} primer estado
+    50%{transform:scale(1.2)} segundo estado
+    100%{transform:scale(1)} tercer estado
+}*/
+.pulse{
+    /* animation:nombredelaanimacion duracion iteracion */
+} 
+
+/* animamos translate y rotacion */
+
+/* @keyframes nombre{
+    0%{
+        propiedad
+    }
+    50%{
+        propiedad
+    }
+    100%{
+       propiedad
+    }
+} */
+
+.mover{
+    /* animation:nombredelaanimacion duracion iteracion */
+} 

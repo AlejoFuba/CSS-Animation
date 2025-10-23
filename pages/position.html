@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Position en CSS — Guía y Ejemplos</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css propio  -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/position.css">
+</head>
+
+<body>
+
+    <header class="bg-dark text-white p-2">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <h1>Position en CSS</h1>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Bootstrap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Position</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./transform.html">Transform</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./animation.html">Animation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <article class="row">
+            <section class="card">
+                <div class="card-body">
+                    <h2 class="card-title">¿De qué trata?</h2>
+                    <p>La propiedad <code>position</code> determina cómo se posiciona un elemento en el flujo del
+                        documento y
+                        respecto a su contenedor o viewport. Los valores principales son: <code>static</code> (por
+                        defecto),
+                        <code>relative</code>, <code>absolute</code>, <code>fixed</code> y <code>sticky</code>.
+                    </p>
+                </div>
+            </section>
+
+            <figure class="col-12 col-md-6">
+                <img class="img-fluid mx-auto" src="../assets/position.jpg" alt="valores de la propiedad Position en css">
+            </figure>
+
+            <section class="col-12 col-md-6 card">
+                <h3 class="card-title">Cómo usarlo</h3>
+                <ul>
+                    <li><code>static</code>: comportamiento normal (sin posicionamiento).</li>
+                    <li><code>relative</code>: se mantiene en el flujo pero puede ajustarse con top/right/bottom/left
+                        respecto a su posición original.</li>
+                    <li><code>absolute</code>: se saca del flujo y se posiciona respecto al ancestro posicionado más
+                        cercano
+                        (<code>position</code> distinto a static).</li>
+                    <li><code>fixed</code>: se fija respecto al viewport; no se mueve al hacer scroll.</li>
+                    <li><code>sticky</code>: actúa como relative hasta que alcanza un umbral de scroll y entonces se
+                        comporta como fixed dentro de su contenedor.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="col-12 col-md-6">
+                <h4>Ventajas</h4>
+                <ul>
+                    <li>Control preciso de la colocación de elementos (modales, tooltips, badges).</li>
+                    <li>Permite crear UI complejas (layouts superpuestos, barras fijas).</li>
+                </ul>
+            </section>
+            <section class="col-12 col-md-6">
+                <h4>Desventajas</h4>
+                <ul>
+                    <li>El uso excesivo de <code>absolute</code> y <code>fixed</code> puede romper el flujo y generar
+                        problemas de accesibilidad/responsividad si no se prueba bien.</li>
+                    <li><code>sticky</code> necesita un ancestro con espacio y no es soportado en versiones muy antiguas de
+                        navegadores.</li>
+                </ul>
+            </section>
+        </article>
+
+        <div class="example">
+            <h5>Ejemplo práctico</h5>
+            <div class="box">
+                <img class="relative" src="../assets/moneda.png" alt="icono moneda">
+                <img  class="absolute" src="../assets/alcancia.png" alt="icono alcancia">
+            </div>
+
+            <p>El icono de whatsapp flotante usa <code>position: fixed</code></p>
+            <img class="fixed" src="../assets/whatsapp.png" alt="ir a whatsapp">
+
+            <p>Encabezado con <code>sticky</code> (prueba haciendo scroll dentro de este
+                documento):</p>
+            <div class="box-sticky">
+                <img class="sticky" src="../assets/arana.png" alt="araña con sticky">
+                <section class="content bg-primary">Contenido simulando scroll... sigue bajando para ver el
+                    sticky en acción.</section>
+                <section class="content bg-success">Contenido simulando scroll... sigue bajando para ver el
+                sticky en acción.</section>
+                <section class="content bg-info">Contenido simulando scroll... sigue bajando para ver el
+                    sticky en acción.</section>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white p-5">
+        <p class="text-center mb-0">CSS Bootstrap - Position - Transform - Animation</p>
+    </footer>
+</body>
+</html>

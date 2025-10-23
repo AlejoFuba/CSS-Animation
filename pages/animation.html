@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones en CSS — Guía y Ejemplos</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css propio  -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/animaciones.css">
+</head>
+
+<body>
+    <header class="bg-dark text-white p-2">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <h1>Animaciones en CSS</h1>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Bootstrap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./position.html">Position</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./transform.html">Transform</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Animation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <article class="row">
+            <section class="card">
+                <div class="card-body">
+                    <h2 class="card-title">¿De qué trata?</h2>
+                    <p>En CSS hay dos herramientas principales para animación: <code>transition</code> (interpolación
+                        entre estados) y <code>@keyframes</code> con <code>animation</code> (animaciones más complejas y
+                        repetitivas).</p>
+                </div>
+            </section>
+
+            <figure class="col-12 col-md-6">
+                <img class="img-fluid mx-auto" src="../assets/animation.png" alt="estados de una animacion">
+            </figure>
+
+            <section class="col-12 col-md-6 card">
+                <h3 class="card-title">Cómo usarlo</h3>
+                <ul>
+                    <li><code>transition</code>: define propiedades a interpolar, duración y timing-function. Ej:
+                        <code>transition: transform 200ms ease;</code></li>
+                    <li><code>@keyframes</code>: define pasos de la animación, luego se aplica con
+                        <code>animation</code> (duración, iteración, dirección).</li>
+                </ul>
+            </section>
+
+            <section class="col-12 col-md-6">
+                <h4>Ventajas</h4>
+                <ul>
+                    <li>Mejor experiencia de usuario cuando se usan para estados y feedback visual.</li>
+                    <li>Buen rendimiento si se animan propiedades transform/opacity (GPU-friendly).</li>
+                </ul>
+            </section>
+            <section class="col-12 col-md-6">
+                <h4>Desventajas</h4>
+                <ul>
+                    <li>Animaciones excesivas o largas pueden distraer y afectar accesibilidad.</li>
+                    <li>Algunas propiedades provocan reflow (ej: width, height) y deben evitarse para animaciones
+                        fluidas.</li>
+                </ul>
+            </section>
+        </article>
+
+        <div class="demo">
+            <div class="box">
+                Hover me
+            </div>
+            <div class="box-animation">
+                <img class="pulse" src="../assets/corazon.png" alt="icono de corazon con animacion de pulso">
+                <small>animacion de pulso (keyframes)</small>
+            </div>
+            <div class="box-animation">
+                <img class="mover" src="../assets/PixarBall.png" alt="pelota de pixar con animacion de desplazamiento">
+                <small>desplazamiento (alternate)</small>
+            </div>
+        </div>
+
+
+        <pre><code>/* transition */
+.box{transition:transform .28s ease, box-shadow .28s ease}
+.box:hover{transform:translateY(-8px);box-shadow:0 12px 28px rgba(0,0,0,0.08)}
+
+
+/* keyframes */
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
+.element{animation:pulse 1.6s infinite}</code></pre>
+
+    </main>
+
+    <footer class="bg-dark text-white p-5">
+        <p class="text-center mb-0">CSS Bootstrap - Position - Transform - Animation</p>
+    </footer>
+
+</body>
+
+</html>

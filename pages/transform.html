@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transform en CSS — Guía y Ejemplos</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css propio  -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/transform.css">
+</head>
+
+<body>
+    <header class="bg-dark text-white p-2">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <h1>Transform en CSS</h1>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Bootstrap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./position.html">Position</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Transform</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./animation.html">Animation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <article class="row">
+            <section class="card">
+                <div class="card-body">
+                    <h2 class="card-title">¿De qué trata?</h2>
+                    <p><code>transform</code> permite aplicar transformaciones 2D y 3D sobre un elemento:
+                        <code>translate()</code>, <code>rotate()</code>, <code>scale()</code>, <code>skew()</code> y
+                        combinaciones. No afecta el flujo (el elemento se transforma visualmente pero su caja original
+                        permanece).</p>
+                    </p>
+                </div>
+            </section>
+
+            <figure class="col-12 col-md-6">
+                <img class="img-fluid mx-auto" src="../assets/transform.jpg" alt="valores de transformacion en css">
+            </figure>
+
+            <section class="col-12 col-md-6 card">
+                <h3 class="card-title">Cómo usarlo</h3>
+                <ol>
+                    <li>Aplica directamente la propiedad: <code>transform: rotate(45deg);</code>.</li>
+                    <li>Usa <code>transform-origin</code> para cambiar el punto de referencia (por defecto es el
+                        centro).</li>
+                    <li>Combina varias funciones en una sola declaración separadas por espacios.</li>
+                </ol>
+            </section>
+
+            <section class="col-12 col-md-6">
+                <h4>Ventajas</h4>
+                <ul>
+                    <li>Rendimiento: las transformaciones suelen ser aceleradas por GPU y suaves.</li>
+                    <li>Permiten micro-interacciones visuales potentes sin reflow del layout.</li>
+                </ul>
+            </section>
+            <section class="col-12 col-md-6">
+                <h4>Desventajas</h4>
+                <ul>
+                    <li>No cambian el flujo; si el contenido transformado puede solaparse con otros elementos hay que
+                        manejarlo con z-index y contenedores.</li>
+                    <li>Transformaciones 3D y animaciones complejas pueden afectar rendimiento en dispositivos viejos.
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <div class="example">
+            <h4>Ejemplos visuales</h4>
+            <div class="stage">
+                <div class="square bg-secondary t-rotate">rotate()</div>
+                <div class="square bg-secondary t-scale">scale()</div>
+                <div class="square bg-secondary t-skew">skew()</div>
+                <div class="square bg-secondary t-combo">combo</div>
+                <div class="square bg-secondary t-perspective"><div class="item-perspective">Perspectiva</div></div>
+            </div>
+
+            <h5>Código de referencia</h5>
+            <pre><code>.rotar{transform:rotate(15deg)}
+.escalar{transform:scale(1.2)}
+.mover{transform:translateX(30px)}
+.origen{transform-origin:top left}</code></pre>
+
+            <p>Tip: para transiciones y animaciones suaves, combina <code>transform</code> con
+                <code>transition</code> en lugar de animar propiedades que provocan reflow (ej: <code>width</code>,
+                <code>top</code>).</p>
+
+    </main>
+
+    <footer class="bg-dark text-white p-5">
+        <p class="text-center mb-0">CSS Bootstrap - Position - Transform - Animation</p>
+    </footer>
+
+</body>
+
+</html>

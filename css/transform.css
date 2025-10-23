@@ -1,0 +1,62 @@
+.stage {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.t-rotate {
+    /* aplicamos la transformación de rotate en grados */
+    /* transform: rotate(00deg) */
+}
+
+.t-scale {
+    /* aplicamos la transformación de escala en unidades */
+    /* transform: scale(1.0) */
+}
+
+.t-skew {
+    /* aplicamos la transformación de Skew en algun eje y en grados */ 
+    /* transform: skewX(00deg); */
+}
+
+.t-combo {
+    /* aplicamos varias transformación a la vez */ 
+    /* transform: translateY(10px) rotate(-6deg) scale(1.05) */
+}
+
+.t-perspective{
+  /* position: relative;
+  perspective: 120px; */
+}
+
+.item-perspective{
+    /* width: 120px;
+  height: 120px;
+  background-color: #231025;
+  color: #ffeefd;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg); */
+}
+
+pre {
+    background: #231025;
+    color: #ffeefd;
+    padding: 0.75rem;
+    border-radius: 6px;
+    overflow: auto
+}
