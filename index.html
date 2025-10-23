@@ -6,25 +6,92 @@
     <title>Bootstrap — Guía y Ejemplos</title>
     <!-- CDN Bootstrap 5 -->
     <!-- aqui agregamos el CDN de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
+    <!-- aqui inicia el menu  -->
+    <nav class="navbar navbar-expand-lg bg-dark text-white" data-bs-theme="dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <h1>Bootstrap</h1>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/position.html">Position</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/transform.html">Transform</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/animation.html">Animation</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- aqui se acaba el menu -->
+      <!-- aqui va el carrusel  -->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/Banner01.jpg" class="d-block w-100" alt="paisaje natural...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/Banner02.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/Banner03.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
-
-    <header class="mb-4">
+    <header class="mb-4 container mt-5">
         <h1>Bootstrap</h1>
         <p class="text-muted">Framework CSS con utilidades, componentes y un sistema de grid rápido para construir
             interfaces responsivas.</p>
     </header>
 
-    <main>
-        <section>
+    <main class="container">
+        <section class="row">
+            <div class="col-12 col-md-6">
                 <h3>¿De qué trata?</h3>
                 <p>Bootstrap ofrece un conjunto de componentes preconstruidos (botones, tarjetas, navbar), utilidades
                     (margen, padding, display) y un grid responsivo de 12 columnas. Acelera el desarrollo UI
                     especialmente en prototipos y admin panels.</p>
-
-
+            </div>
+            
+            <div class="col-12 col-md-6">
                 <h4>Cómo usarlo</h4>
                 <ol>
                     <li>Incluir CSS y JS de Bootstrap (CDN o instalando via npm).</li>
@@ -32,28 +99,32 @@
                         como <code>d-flex</code>, <code>justify-content-between</code>.</li>
                     <li>Personalizar con SASS o sobrescribiendo variables si se requiere identidad de marca.</li>
                 </ol>
+            </div>
 
-
+            <div class="col-12 col-md-6">
                 <h4>Ventajas</h4>
                 <ul>
                     <li>Rápida productividad y prototipado.</li>
                     <li>Consistencia entre componentes y amplia documentación y comunidad.</li>
                 </ul>
+            </div>
+            
+            <div class="col-12 col-md-6">
                 <h4>Desventajas</h4>
                 <ul>
                     <li>El resultado puede verse genérico si no se personaliza.</li>
                     <li>Incluye CSS y JS que podrías no necesitar.</li>
                 </ul>
-
-
+            </div>
 
                 <p><strong>Nota:</strong> Para usar componentes JS (modal, dropdown) necesitas el bundle JS
                     de Bootstrap o Popper si tu versión lo requiere.</p>
         </section>
     </main>
 
-    <footer>Bootstrap es ideal para acelerar el desarrollo, pero siempre verifica peso y
+    <footer class="bg-dark text-white p-3 text-center">Bootstrap es ideal para acelerar el desarrollo, pero siempre verifica peso y
         personalización para proyectos en producción.</footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
