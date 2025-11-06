@@ -24,11 +24,17 @@ transition: property - Duration - Timing-function - delay; */
     background-color: #1aa179;
     border: 1px dashed #1b7be0;
     border-radius: 8px;
+    transition: all 200ms;
+    box-shadow:0 12px 28px rgba(0,0,0,0.0.8);
+    cursor: pointer;
     /* definimos la transicion de nuestro elemento */
 }
 
 /* Hover es una seudo clase que nos ayuda a indicar estados */
 .box:hover{
+    box-shadow:0 12px 28px rgba(0,0,0,0.6);
+    transform: scale(1.2);
+    background-color: #147a5b;
     /* Aplicamos transformaciones al elemento */
 }
 
@@ -59,24 +65,34 @@ transition: property - Duration - Timing-function - delay; */
     50%{transform:scale(1.2)} segundo estado
     100%{transform:scale(1)} tercer estado
 }*/
+
+@keyframes pulsacion{
+    0%{transform: scale(1)}
+    50%{transform: scale(1.2)}
+    100%{transform: scale(1)}
+}
+
+
 .pulse{
     /* animation:nombredelaanimacion duracion iteracion */
+    animation: pulsacion 3s infinite ease-in-out;
 } 
 
 /* animamos translate y rotacion */
 
-/* @keyframes nombre{
+@keyframes desplazamiento{
     0%{
-        propiedad
+        transform: translateX(-30px) rotate(0deg);
     }
     50%{
-        propiedad
+        transform: translateX(0px) rotate(90deg);
     }
     100%{
-       propiedad
+        transform: translateX(30px) rotate(180deg);
     }
-} */
+}
 
 .mover{
     /* animation:nombredelaanimacion duracion iteracion */
+    animation: desplazamiento 4s infinite cubic-bezier(.2,1.29,.77,.22) alternate;
 } 

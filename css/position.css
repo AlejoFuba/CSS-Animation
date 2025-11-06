@@ -30,20 +30,32 @@
 .relative {
     /* position: relative */
     /* agregamos posiciones top right left o bottom */
+    position: relative;
+    top: 50px;
+    right: -100px;
 }
 
 .absolute {
     /* position: absolute; */
     /* agregamos posiciones top right left o bottom */
+    position: absolute;
+    top: 50px;
+    left: 5%;
 }
 
 .fixed {
     /* position: fixed; */
     /* agregamos posiciones top right left o bottom */
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
 }
 
 .sticky {
     /* position: sticky; */
     /* agregamos posiciones top right left o bottom */
+    position: sticky;
+    top: 5px;
+    left: 50px;
 }
 

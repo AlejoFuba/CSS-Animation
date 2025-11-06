@@ -17,32 +17,37 @@
 .t-rotate {
     /* aplicamos la transformación de rotate en grados */
     /* transform: rotate(00deg) */
+    transform: rotate(50deg);
+    transform-origin: top right;
 }
 
 .t-scale {
     /* aplicamos la transformación de escala en unidades */
     /* transform: scale(1.0) */
+    transform: scale(0.4);
 }
 
 .t-skew {
     /* aplicamos la transformación de Skew en algun eje y en grados */ 
     /* transform: skewX(00deg); */
+    transform: skewY(15deg);
 }
 
 .t-combo {
     /* aplicamos varias transformación a la vez */ 
     /* transform: translateY(10px) rotate(-6deg) scale(1.05) */
+    transform: scale(0.8) rotate(35deg) skew(15deg);
 }
 
 .t-perspective{
-  /* position: relative;
-  perspective: 120px; */
+  position: relative;
+  perspective: 120px;
 }
 
 .item-perspective{
-    /* width: 120px;
+    width: 120px;
   height: 120px;
-  background-color: #231025;
+  background-color: #702279;
   color: #ffeefd;
   position: absolute;
   left: 0;
@@ -50,7 +55,7 @@
   bottom: 0;
   top: 0;
     transform-style: preserve-3d;
-    transform: rotateX(45deg); */
+    transform: rotateY(45deg); */
 }
 
 pre {
